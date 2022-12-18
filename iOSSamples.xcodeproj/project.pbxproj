@@ -20,6 +20,9 @@
 		BC599FD9294C62FF0095272E /* iOSSamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC599FD8294C62FF0095272E /* iOSSamplesTests.swift */; };
 		BC599FE3294C62FF0095272E /* iOSSamplesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC599FE2294C62FF0095272E /* iOSSamplesUITests.swift */; };
 		BC599FE5294C62FF0095272E /* iOSSamplesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC599FE4294C62FF0095272E /* iOSSamplesUITestsLaunchTests.swift */; };
+		BC599FF3294F19630095272E /* Samples.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC599FF2294F19630095272E /* Samples.swift */; };
+		BC599FF6294F4A4B0095272E /* UILabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC599FF5294F4A4B0095272E /* UILabelViewController.swift */; };
+		BC599FF8294F4FA90095272E /* UIButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC599FF7294F4FA90095272E /* UIButtonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		BC599FDE294C62FF0095272E /* iOSSamplesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSSamplesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC599FE2294C62FF0095272E /* iOSSamplesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSSamplesUITests.swift; sourceTree = "<group>"; };
 		BC599FE4294C62FF0095272E /* iOSSamplesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSSamplesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BC599FF2294F19630095272E /* Samples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Samples.swift; sourceTree = "<group>"; };
+		BC599FF5294F4A4B0095272E /* UILabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelViewController.swift; sourceTree = "<group>"; };
+		BC599FF7294F4FA90095272E /* UIButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonViewController.swift; sourceTree = "<group>"; };
 		EC69FEDF2D57AEE80977A5D7 /* Pods_iOSSamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSSamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -161,11 +167,22 @@
 		BC599FF1294C6C530095272E /* srcs */ = {
 			isa = PBXGroup;
 			children = (
+				BC599FF4294F49BB0095272E /* SampleViewControllers */,
 				BC599FBE294C62FE0095272E /* AppDelegate.swift */,
 				BC599FC0294C62FE0095272E /* SceneDelegate.swift */,
 				BC599FC2294C62FE0095272E /* ViewController.swift */,
+				BC599FF2294F19630095272E /* Samples.swift */,
 			);
 			path = srcs;
+			sourceTree = "<group>";
+		};
+		BC599FF4294F49BB0095272E /* SampleViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BC599FF5294F4A4B0095272E /* UILabelViewController.swift */,
+				BC599FF7294F4FA90095272E /* UIButtonViewController.swift */,
+			);
+			path = SampleViewControllers;
 			sourceTree = "<group>";
 		};
 		C6CB2D5266181E6348370666 /* Frameworks */ = {
@@ -438,7 +455,10 @@
 				BC599FC3294C62FE0095272E /* ViewController.swift in Sources */,
 				BC599FBF294C62FE0095272E /* AppDelegate.swift in Sources */,
 				BC599FC1294C62FE0095272E /* SceneDelegate.swift in Sources */,
+				BC599FF3294F19630095272E /* Samples.swift in Sources */,
 				BC599FC9294C62FE0095272E /* iOSSamples.xcdatamodeld in Sources */,
+				BC599FF8294F4FA90095272E /* UIButtonViewController.swift in Sources */,
+				BC599FF6294F4A4B0095272E /* UILabelViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
