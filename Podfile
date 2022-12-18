@@ -8,6 +8,7 @@ target 'iOSSamples' do
   # Pods for iOSSamples
   pod 'RxSwift', '6.5.0'
   pod 'RxCocoa', '6.5.0'
+  pod 'SnapKit'
 
   target 'iOSSamplesTests' do
     inherit! :search_paths
