@@ -23,6 +23,7 @@
 		BC599FF3294F19630095272E /* Samples.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC599FF2294F19630095272E /* Samples.swift */; };
 		BC599FF6294F4A4B0095272E /* UILabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC599FF5294F4A4B0095272E /* UILabelViewController.swift */; };
 		BC599FF8294F4FA90095272E /* UIButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC599FF7294F4FA90095272E /* UIButtonViewController.swift */; };
+		BC599FFA294F56640095272E /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC599FF9294F56640095272E /* BasicViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		BC599FF2294F19630095272E /* Samples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Samples.swift; sourceTree = "<group>"; };
 		BC599FF5294F4A4B0095272E /* UILabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelViewController.swift; sourceTree = "<group>"; };
 		BC599FF7294F4FA90095272E /* UIButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonViewController.swift; sourceTree = "<group>"; };
+		BC599FF9294F56640095272E /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 		EC69FEDF2D57AEE80977A5D7 /* Pods_iOSSamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSSamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -181,6 +183,7 @@
 			children = (
 				BC599FF5294F4A4B0095272E /* UILabelViewController.swift */,
 				BC599FF7294F4FA90095272E /* UIButtonViewController.swift */,
+				BC599FF9294F56640095272E /* BasicViewController.swift */,
 			);
 			path = SampleViewControllers;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				BC599FC1294C62FE0095272E /* SceneDelegate.swift in Sources */,
 				BC599FF3294F19630095272E /* Samples.swift in Sources */,
 				BC599FC9294C62FE0095272E /* iOSSamples.xcdatamodeld in Sources */,
+				BC599FFA294F56640095272E /* BasicViewController.swift in Sources */,
 				BC599FF8294F4FA90095272E /* UIButtonViewController.swift in Sources */,
 				BC599FF6294F4A4B0095272E /* UILabelViewController.swift in Sources */,
 			);

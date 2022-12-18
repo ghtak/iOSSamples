@@ -6,16 +6,44 @@
 //
 
 import UIKit
+import SnapKit
+import RxSwift
+import RxCocoa
 
-class UIButtonViewController: UIViewController {
+
+class UIButtonViewController: BasicViewController {
+    
+    var button : UIButton = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(white: 0.9, alpha: 1.0)
         self.navigationItem.title = "UIButton"
+        self.view.addSubview(button)
+        
+        self.button.translatesAutoresizingMaskIntoConstraints = false
+        self.button.backgroundColor = .orange
+        self.button.setTitle("UIBUtton", for: .normal)
+        self.button.setTitleColor(.gray, for: .normal)
+        self.button.layer.masksToBounds = true
+        self.button.layer.cornerRadius = 5.0
 
+        self.button.snp.makeConstraints { make in
+            make.top.left.right.equalTo(self.view).inset(100)
+        }
+        self.button.rx.tap.subscribe { event in
+            print("onTapButton");
+        }.disposed(by: disposeBag)
+        
+        //self.button.addTarget(self, action: #selector(onTapButton(_:)), for: .touchUpInside)
         // Do any additional setup after loading the view.
     }
+    
+    @objc internal func onTapButton(_ sender: Any) {
+        if let _ = sender as? UIButton {
+            print("onTapButton");
+        }
+    }
+    
     
 
     /*

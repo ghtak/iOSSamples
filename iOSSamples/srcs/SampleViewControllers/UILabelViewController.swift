@@ -8,7 +8,7 @@
 import SnapKit
 import UIKit
 
-class UILabelViewController: UIViewController {
+class UILabelViewController: BasicViewController {
     lazy var label: UILabel = {
         // Define the size of the label.
 
@@ -29,9 +29,9 @@ class UILabelViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(white: 0.9, alpha: 1.0)
         self.navigationItem.title = "UILabel"
         self.view.addSubview(self.label)
+        self.label.translatesAutoresizingMaskIntoConstraints = false
         self.label.snp.makeConstraints { make in
             // 1
             // make.top.equalToSuperview().offset(100)
