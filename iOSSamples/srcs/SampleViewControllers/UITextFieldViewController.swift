@@ -17,6 +17,7 @@ class UITextFieldViewController: BasicViewController,
         super.viewDidLoad()
         self.navigationItem.title = "UITextField"
         self.setupUI()
+        self.dismissKeyboard()
     }
 
     func setupUI() {
