@@ -15,7 +15,7 @@ class UIButtonViewController: BasicViewController {
         super.viewDidLoad()
         self.navigationItem.title = "UIButton"
 
-        var top_constraint_view: UIView?
+        var top_constraint_view: UIView? = self.view
 
         let btn_types = [UIButton.ButtonType.system,
                          UIButton.ButtonType.close,
@@ -31,26 +31,23 @@ class UIButtonViewController: BasicViewController {
                               "detailDisclosure",
                               "infoDark",
                               "infoLight"]
+        let insets = [100, 50, 50, 50, 50, 50, 50]
 
-        for (buttonType, name) in zip(btn_types, btn_type_names) {
+        for (inset, (buttonType, name)) in zip(insets, zip(btn_types, btn_type_names)) {
             let button = UIButton(type: buttonType)
             self.view.addSubview(button)
             button.translatesAutoresizingMaskIntoConstraints = false
             button.backgroundColor = .gray
             button.setTitle(name, for: .normal)
             button.setTitleColor(.black, for: .normal)
-            //button.layer.masksToBounds = true
-            //button.layer.cornerRadius = 5.0
+            // button.layer.masksToBounds = true
+            // button.layer.cornerRadius = 5.0
             button.snp.makeConstraints { make in
-                if top_constraint_view == nil{
-                    make.top.equalTo(self.view!).inset(100)
-                } else{
-                    make.top.equalTo(top_constraint_view!).inset(50)
-                }
+                make.top.equalTo(top_constraint_view!).inset(inset)
                 make.left.right.equalTo(self.view).inset(100)
             }
-            button.rx.tap.subscribe { event in
-                print(name);
+            button.rx.tap.subscribe { _ in
+                print(name)
             }.disposed(by: disposeBag)
             top_constraint_view = button
         }

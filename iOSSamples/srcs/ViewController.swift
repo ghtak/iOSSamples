@@ -15,6 +15,7 @@ extension Samples {
         switch self {
         case .UILabel: return UILabelViewController()
         case .UIButton: return UIButtonViewController()
+        case .UITextField: return UITextFieldViewController()
         default: return UIViewController()
         }
     }

@@ -11,7 +11,7 @@ import UIKit
 enum Samples : CaseIterable {
     case UILabel
     case UIButton
-    case UITextLabel
+    case UITextField
     
 }
 
