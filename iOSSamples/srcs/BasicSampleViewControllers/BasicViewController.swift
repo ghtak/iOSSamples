@@ -7,6 +7,7 @@
 
 import RxSwift
 import UIKit
+import RxCocoa
 
 class BasicViewController: UIViewController {
     let disposeBag = DisposeBag()

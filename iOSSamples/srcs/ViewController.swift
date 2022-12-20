@@ -18,6 +18,7 @@ extension Samples {
         case .UITextField: return UITextFieldViewController()
         case .UIImageView: return UIImageViewViewController()
         case .UITextView: return UITextViewViewController()
+        case .UISlider: return UISliderViewController()
         default: return UIViewController()
         }
     }
