@@ -27,6 +27,7 @@
 		BC599FFC29507EC90095272E /* UITextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC599FFB29507EC90095272E /* UITextFieldViewController.swift */; };
 		BC59A00029519F0A0095272E /* UIImageViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC599FFE29519F0A0095272E /* UIImageViewViewController.swift */; };
 		BC59A00129519F0A0095272E /* UIImageViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC599FFF29519F0A0095272E /* UIImageViewViewController.xib */; };
+		BC59A0032951B8F70095272E /* UITextViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC59A0022951B8F70095272E /* UITextViewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		BC599FFB29507EC90095272E /* UITextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldViewController.swift; sourceTree = "<group>"; };
 		BC599FFE29519F0A0095272E /* UIImageViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewViewController.swift; sourceTree = "<group>"; };
 		BC599FFF29519F0A0095272E /* UIImageViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIImageViewViewController.xib; sourceTree = "<group>"; };
+		BC59A0022951B8F70095272E /* UITextViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewViewController.swift; sourceTree = "<group>"; };
 		EC69FEDF2D57AEE80977A5D7 /* Pods_iOSSamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSSamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -175,7 +177,7 @@
 		BC599FF1294C6C530095272E /* srcs */ = {
 			isa = PBXGroup;
 			children = (
-				BC599FF4294F49BB0095272E /* SampleViewControllers */,
+				BC599FF4294F49BB0095272E /* BasicSampleViewControllers */,
 				BC599FBE294C62FE0095272E /* AppDelegate.swift */,
 				BC599FC0294C62FE0095272E /* SceneDelegate.swift */,
 				BC599FC2294C62FE0095272E /* ViewController.swift */,
@@ -184,7 +186,7 @@
 			path = srcs;
 			sourceTree = "<group>";
 		};
-		BC599FF4294F49BB0095272E /* SampleViewControllers */ = {
+		BC599FF4294F49BB0095272E /* BasicSampleViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				BC599FF9294F56640095272E /* BasicViewController.swift */,
@@ -193,8 +195,9 @@
 				BC599FFB29507EC90095272E /* UITextFieldViewController.swift */,
 				BC599FFE29519F0A0095272E /* UIImageViewViewController.swift */,
 				BC599FFF29519F0A0095272E /* UIImageViewViewController.xib */,
+				BC59A0022951B8F70095272E /* UITextViewViewController.swift */,
 			);
-			path = SampleViewControllers;
+			path = BasicSampleViewControllers;
 			sourceTree = "<group>";
 		};
 		C6CB2D5266181E6348370666 /* Frameworks */ = {
@@ -474,6 +477,7 @@
 				BC599FF8294F4FA90095272E /* UIButtonViewController.swift in Sources */,
 				BC59A00029519F0A0095272E /* UIImageViewViewController.swift in Sources */,
 				BC599FFC29507EC90095272E /* UITextFieldViewController.swift in Sources */,
+				BC59A0032951B8F70095272E /* UITextViewViewController.swift in Sources */,
 				BC599FF6294F4A4B0095272E /* UILabelViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

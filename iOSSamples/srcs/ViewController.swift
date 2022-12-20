@@ -17,14 +17,14 @@ extension Samples {
         case .UIButton: return UIButtonViewController()
         case .UITextField: return UITextFieldViewController()
         case .UIImageView: return UIImageViewViewController()
+        case .UITextView: return UITextViewViewController()
         default: return UIViewController()
         }
     }
 }
 
-class ViewController: UIViewController {
+class ViewController: BasicViewController {
     @IBOutlet var tableView: UITableView!
-    let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
