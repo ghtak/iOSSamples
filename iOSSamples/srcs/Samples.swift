@@ -12,6 +12,6 @@ enum Samples : CaseIterable {
     case UILabel
     case UIButton
     case UITextField
-    
+    case UIImageView
 }
 

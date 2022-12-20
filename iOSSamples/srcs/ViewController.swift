@@ -16,6 +16,7 @@ extension Samples {
         case .UILabel: return UILabelViewController()
         case .UIButton: return UIButtonViewController()
         case .UITextField: return UITextFieldViewController()
+        case .UIImageView: return UIImageViewViewController()
         default: return UIViewController()
         }
     }
