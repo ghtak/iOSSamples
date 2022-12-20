@@ -28,8 +28,8 @@ class UITextFieldViewController: BasicViewController,
             make.top.equalToSuperview().inset(100)
             make.left.right.equalToSuperview().inset(50)
         }
-        //textfield.delegate = self
-        
+        // textfield.delegate = self
+
         textfield.rx.text
             .orEmpty
             .distinctUntilChanged()
@@ -39,16 +39,77 @@ class UITextFieldViewController: BasicViewController,
                 }
             )
             .disposed(by: disposeBag)
+
+        let button = UIButton(type: UIButton.ButtonType.system)
+        self.view.addSubview(button)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = .gray
+        button.setTitle("SetAttrText", for: .normal)
+        button.snp.makeConstraints { make in
+            make.top.equalTo(textfield).offset(50)
+            make.left.right.equalTo(textfield)
+        }
+
+        button.rx.tap
+            .subscribe(onNext: { [weak self, weak textfield] in
+                self?.configureTextField(textfield)
+            }).disposed(by: disposeBag)
     }
-    
+
+    func configureTextField(_ textField: UITextField?) {
+        let google = "google"
+        let github = "github"
+        let generalText = String(
+            format: "고정된 링크로 이동하는 예제로 \n%@링크와 %@링크로 이동해봅시다",
+            google,
+            github
+        )
+
+        let italicFont = UIFont.italicSystemFont(ofSize: 18)
+        let boldFont = UIFont.boldSystemFont(ofSize: 18)
+
+        let green = UIColor.systemGreen
+        let darkGray = UIColor.darkGray
+
+        // NSAttributedString.Key, Value 속성 정의
+        let generalAttributes: [NSAttributedString.Key: Any] = [
+            .foregroundColor: darkGray,
+            .font: boldFont
+        ]
+        let linkAttributes: [NSAttributedString.Key: Any] = [
+            .underlineStyle: NSUnderlineStyle.single.rawValue,
+            .foregroundColor: green,
+            .font: italicFont
+        ]
+
+        let mutableString = NSMutableAttributedString()
+
+        // generalAttributes(기본 스타일) 적용
+        mutableString.append(
+            NSAttributedString(string: generalText, attributes: generalAttributes)
+        )
+
+        // 각 문자열의 range에 linkAttributes 적용
+        mutableString.setAttributes(
+            linkAttributes,
+            range: (generalText as NSString).range(of: google)
+        )
+        mutableString.setAttributes(
+            linkAttributes,
+            range: (generalText as NSString).range(of: github)
+        )
+
+        textField?.attributedText = mutableString
+    }
+
     func textFieldDidBeginEditing(_ textField: UITextField) {
         print("Begin = \(textField.text ?? "Empty")")
     }
-    
+
     func textFieldDidEndEditing(_ textField: UITextField) {
         print("End = \(textField.text ?? "Empty")")
     }
-    
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print("Return = \(textField.text ?? "Empty")")
         textField.resignFirstResponder()

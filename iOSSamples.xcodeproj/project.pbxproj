@@ -119,12 +119,12 @@
 		BC599FB2294C62FE0095272E = {
 			isa = PBXGroup;
 			children = (
+				C6CB2D5266181E6348370666 /* Frameworks */,
 				BC599FBD294C62FE0095272E /* iOSSamples */,
 				BC599FD7294C62FF0095272E /* iOSSamplesTests */,
 				BC599FE1294C62FF0095272E /* iOSSamplesUITests */,
-				BC599FBC294C62FE0095272E /* Products */,
 				4B378BCDA1721BF0A0F54740 /* Pods */,
-				C6CB2D5266181E6348370666 /* Frameworks */,
+				BC599FBC294C62FE0095272E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,9 +184,9 @@
 			isa = PBXGroup;
 			children = (
 				BC599FFD29509CB90095272E /* StoryBoards */,
-				BC599FF5294F4A4B0095272E /* UILabelViewController.swift */,
-				BC599FF7294F4FA90095272E /* UIButtonViewController.swift */,
 				BC599FF9294F56640095272E /* BasicViewController.swift */,
+				BC599FF7294F4FA90095272E /* UIButtonViewController.swift */,
+				BC599FF5294F4A4B0095272E /* UILabelViewController.swift */,
 				BC599FFB29507EC90095272E /* UITextFieldViewController.swift */,
 			);
 			path = SampleViewControllers;
