@@ -43,8 +43,9 @@ class UILabelViewController: BasicViewController {
             // make.left.right.equalToSuperview().inset(100)
 
             // 3
-            make.top.left.right.equalToSuperview().inset(
-                UIEdgeInsets(top: 100, left: 100, bottom: 0, right: 100))
+            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.topMargin)
+            make.left.right.equalToSuperview().inset(
+                UIEdgeInsets(top: 0, left: 100, bottom: 0, right: 100))
         }
     }
 

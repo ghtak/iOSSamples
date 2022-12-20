@@ -25,7 +25,7 @@ class UITextFieldViewController: BasicViewController,
         self.view.addSubview(textfield)
         textfield.backgroundColor = .gray
         textfield.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(100)
+            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.topMargin)
             make.left.right.equalToSuperview().inset(50)
         }
         // textfield.delegate = self

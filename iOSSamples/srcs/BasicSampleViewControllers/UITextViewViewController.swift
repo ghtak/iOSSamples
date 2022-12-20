@@ -23,10 +23,18 @@ class UITextViewViewController: BasicViewController {
         let textView = UITextView()
         self.view.addSubview(textView)
         textView.translatesAutoresizingMaskIntoConstraints = false
-        
-        textView.backgroundColor = .gray
+        textView.layer.cornerRadius = 5.0
+        textView.layer.borderWidth = 1
+        textView.layer.borderColor = UIColor.black.cgColor
+        textView.font = UIFont.systemFont(ofSize: 14)
+        textView.textColor = .gray
+        textView.textAlignment = .center
+        //textView.dataDetectorTypes = UIDataDetectorTypes.all
+        textView.layer.shadowOpacity = 0.5
+        //textView.isEditable = false
         textView.snp.makeConstraints { make in
-            make.top.left.right.equalToSuperview().inset(100)
+            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.topMargin)
+            make.left.right.equalToSuperview().inset(50)
             make.height.equalToSuperview().dividedBy(2)
         }
         
