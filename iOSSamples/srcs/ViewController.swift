@@ -19,6 +19,7 @@ extension Samples {
         case .UIImageView: return UIImageViewViewController()
         case .UITextView: return UITextViewViewController()
         case .UISlider: return UISliderViewController()
+        case .UISwitch: return UISwitchViewController()
         default: return UIViewController()
         }
     }
